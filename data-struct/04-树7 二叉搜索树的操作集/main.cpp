@@ -23,7 +23,7 @@ int main()
     BinTree BST, MinP, MaxP, Tmp;
     ElementType X;
     int N, i;
-
+    
     BST = NULL;
     scanf("%d", &N);
     for ( i=0; i<N; i++ ) {
@@ -79,7 +79,6 @@ BinTree Insert( BinTree BST, ElementType X ) {
         BST = (BinTree)malloc(sizeof(struct TNode));
         BST->Data = X;
         BST->Left = BST->Right = NULL;
-        
     } else {
         if (BST->Data > X) {
             BST->Left = Insert(BST->Left, X);
@@ -106,12 +105,11 @@ BinTree Delete( BinTree BST, ElementType X ) {
                 BST->Data = Tmp->Data;
                 BST->Right = Delete(BST->Right, BST->Data);
             } else {
-                Tmp = BST;
-                if (!BST->Left)
+                if (BST->Right)
+                    //如果只有右边节点
                     BST = BST->Right;
                 else
                     BST = BST->Left;
-                free(Tmp);
             }
         }
     }
@@ -125,8 +123,7 @@ Position Find( BinTree BST, ElementType X ) {
         return Find(BST->Left, X);
     else if (BST->Data < X)
         return Find(BST->Right, X);
-    else
-        return BST;
+    return BST;
 }
 
 Position FindMin( BinTree BST ) {
@@ -135,12 +132,10 @@ Position FindMin( BinTree BST ) {
             BST = BST->Left;
     return BST;
 }
-
 Position FindMax( BinTree BST ) {
     if (!BST)
         return NULL;
     else if (!BST->Right)
         return BST;
-    else
-        return FindMax(BST->Right);
+    return FindMax(BST->Right);
 }
