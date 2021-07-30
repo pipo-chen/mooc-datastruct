@@ -39,21 +39,21 @@ int pop(Stack s) {
 }
 
 //根据先序和中序构建后序
-Tree BulidTree(int *inOrder, int *preOrder, int p1, int p2, int i1, int i2) {
-    Tree t = (Tree)malloc(sizeof(struct TreeNode));
-    t->Elem = preOrder[p1];
-    t->Left = NULL;
-    t->Right = NULL;
-    int pos = i1;
-    while (inOrder[pos] != preOrder[p1]) {
-        pos++;
+Tree BulidTree(int *inOrder, int *preOrder, int preL, int preR, int inL, int inR) {
+    if (preL > preR)
+        return NULL;
+    Tree root = (Tree)malloc(sizeof(struct Node));
+    root->Elem = preOrder[preL];
+    int k;
+    for (k = inL; k < inR; k++) {
+        if (inOrder[k] == preOrder[preL])
+            break;
     }
-    int children = pos - i1;
-    if (pos > i1)
-        t->Left = BulidTree(inOrder, preOrder, p1+1, p1 + children, i1, pos-1);
-    if (pos < i2)
-        t->Right = BulidTree(inOrder, preOrder,  p1 + children + 1, p2, pos+1, i2);
-    return t;
+    int diff = k - inL;
+    root->Left = BulidTree(inOrder, preOrder, preL + 1, preL + diff, inL, k - 1);
+    root->Right = BulidTree(inOrder, preOrder, preL + diff + 1, preR, k + 1, inR);
+    return root;
+    
 }
 
 void LastOrder(Tree t, int last) {
@@ -87,7 +87,7 @@ int main(int argc, const char * argv[]) {
             inOrder[in_index++] = pop(s);
         }
     }
-    
+    //顺序是对的 开始构造树
     Tree t = BulidTree(inOrder, preOrder, 0, N - 1, 0, N - 1);
     LastOrder(t, preOrder[0]);
     
