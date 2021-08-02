@@ -11,6 +11,7 @@
 		4D2E9D6C26B2AE6400CEA8C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9D6B26B2AE6400CEA8C3 /* main.cpp */; };
 		4D2E9D7726B2C65100CEA8C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9D7626B2C65100CEA8C3 /* main.cpp */; };
 		4D2E9D8226B3F3D200CEA8C3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D2E9D8126B3F3D200CEA8C3 /* main.cpp */; };
+		4D729CE026B79E560074AEA3 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D729CDF26B79E560074AEA3 /* main.cpp */; };
 		4DDD4D0226A660DD0065D11C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD4D0126A660DD0065D11C /* main.cpp */; };
 		4DDD4D0F26A661480065D11C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD4D0E26A661480065D11C /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -79,6 +80,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		4D729CDB26B79E560074AEA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		4DDD4CFC26A660DD0065D11C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -111,6 +121,8 @@
 		4D2E9D7626B2C65100CEA8C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D2E9D7F26B3F3D200CEA8C3 /* 04-树4 是否同一棵二叉搜索树 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "04-树4 是否同一棵二叉搜索树"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D2E9D8126B3F3D200CEA8C3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D729CDD26B79E560074AEA3 /* 04-树5 Root of AVL Tree */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "04-树5 Root of AVL Tree"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D729CDF26B79E560074AEA3 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DDD4CFE26A660DD0065D11C /* data-struct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-struct"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDD4D0126A660DD0065D11C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DDD4D0C26A661480065D11C /* 04-树7 二叉搜索树的操作集 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "04-树7 二叉搜索树的操作集"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -167,6 +179,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D729CDA26B79E560074AEA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DDD4CFB26A660DD0065D11C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -216,6 +235,14 @@
 			path = "04-树4 是否同一棵二叉搜索树";
 			sourceTree = "<group>";
 		};
+		4D729CDE26B79E560074AEA3 /* 04-树5 Root of AVL Tree */ = {
+			isa = PBXGroup;
+			children = (
+				4D729CDF26B79E560074AEA3 /* main.cpp */,
+			);
+			path = "04-树5 Root of AVL Tree";
+			sourceTree = "<group>";
+		};
 		4DDD4CF526A660DD0065D11C = {
 			isa = PBXGroup;
 			children = (
@@ -225,6 +252,7 @@
 				4D2E9D6A26B2AE6400CEA8C3 /* List Leaves */,
 				4D2E9D7526B2C65100CEA8C3 /* Traversals Again */,
 				4D2E9D8026B3F3D200CEA8C3 /* 04-树4 是否同一棵二叉搜索树 */,
+				4D729CDE26B79E560074AEA3 /* 04-树5 Root of AVL Tree */,
 				4DDD4CFF26A660DD0065D11C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -241,6 +269,7 @@
 				4D2E9D6926B2AE6400CEA8C3 /* List Leaves */,
 				4D2E9D7426B2C65100CEA8C3 /* Traversals Again */,
 				4D2E9D7F26B3F3D200CEA8C3 /* 04-树4 是否同一棵二叉搜索树 */,
+				4D729CDD26B79E560074AEA3 /* 04-树5 Root of AVL Tree */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -383,6 +412,23 @@
 			productReference = 4D2E9D7F26B3F3D200CEA8C3 /* 04-树4 是否同一棵二叉搜索树 */;
 			productType = "com.apple.product-type.tool";
 		};
+		4D729CDC26B79E560074AEA3 /* 04-树5 Root of AVL Tree */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D729CE326B79E560074AEA3 /* Build configuration list for PBXNativeTarget "04-树5 Root of AVL Tree" */;
+			buildPhases = (
+				4D729CD926B79E560074AEA3 /* Sources */,
+				4D729CDA26B79E560074AEA3 /* Frameworks */,
+				4D729CDB26B79E560074AEA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "04-树5 Root of AVL Tree";
+			productName = "04-树5 Root of AVL Tree";
+			productReference = 4D729CDD26B79E560074AEA3 /* 04-树5 Root of AVL Tree */;
+			productType = "com.apple.product-type.tool";
+		};
 		4DDD4CFD26A660DD0065D11C /* data-struct */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DDD4D0526A660DD0065D11C /* Build configuration list for PBXNativeTarget "data-struct" */;
@@ -446,6 +492,9 @@
 					4D2E9D7E26B3F3D200CEA8C3 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					4D729CDC26B79E560074AEA3 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					4DDD4CFD26A660DD0065D11C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -476,6 +525,7 @@
 				4D2E9D6826B2AE6400CEA8C3 /* List Leaves */,
 				4D2E9D7326B2C65100CEA8C3 /* Traversals Again */,
 				4D2E9D7E26B3F3D200CEA8C3 /* 04-树4 是否同一棵二叉搜索树 */,
+				4D729CDC26B79E560074AEA3 /* 04-树5 Root of AVL Tree */,
 			);
 		};
 /* End PBXProject section */
@@ -531,6 +581,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D2E9D8226B3F3D200CEA8C3 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D729CD926B79E560074AEA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D729CE026B79E560074AEA3 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +716,22 @@
 			name = Debug;
 		};
 		4D2E9D8426B3F3D200CEA8C3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4D729CE126B79E560074AEA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4D729CE226B79E560074AEA3 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -870,6 +944,15 @@
 			buildConfigurations = (
 				4D2E9D8326B3F3D200CEA8C3 /* Debug */,
 				4D2E9D8426B3F3D200CEA8C3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D729CE326B79E560074AEA3 /* Build configuration list for PBXNativeTarget "04-树5 Root of AVL Tree" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D729CE126B79E560074AEA3 /* Debug */,
+				4D729CE226B79E560074AEA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
