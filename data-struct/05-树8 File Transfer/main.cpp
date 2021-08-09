@@ -7,92 +7,82 @@
 
 #include <iostream>
 using namespace::std;
-#define MAXSIZE 10010
-typedef struct node SetType;
-struct node {
-    int data;
-    int parent;
-};
-int find_root(SetType datas[], SetType node) {
-    if (node.parent <= -1)
-        return node.data;
-    return find_root(datas, datas[node.parent]);
+#define MaxSize 10010
+typedef int ElementType;
+typedef int SetName; /*默认用根结点的下标作为集合名称*/
+typedef ElementType SetType[MaxSize];
+
+SetName Find(SetType S, ElementType X) {
+    while (S[X] >= 0) {
+        X = S[X];
+    }
+    return X;
 }
 
-bool check_two_nodes(SetType datas[], int n1, int n2) {
-    if (datas[n1].parent <= -1) {
-        return false;
+void Union(SetType S, SetName Root1, SetName Root2) {
+    if (S[Root2] < S[Root1]) {
+        S[Root2] += S[Root1];
+        S[Root1] = Root2;
+    } else {
+        S[Root1] += S[Root2];
+        S[Root2] = Root1;
     }
-    if (datas[n1].parent == n2) {
-        return true;
-    }
-    return check_two_nodes(datas, datas[n1].parent, n2);
+}
+void Input_connection(SetType S) {
+    ElementType u, v;
+    SetName Root1, Root2;
+    scanf("%d %d\n", &u, &v);
+    Root1 = Find(S, u - 1);
+    Root2 = Find(S, v - 1);
+    if (Root1 != Root2)
+        Union(S, Root1, Root2);
 }
 
-void input_conntection(SetType datas[], int n1, int n2) {
-    //寻找根的过程中 有没有遇到n2
-    int root1 = find_root(datas, datas[n1]);
-    int root2 = find_root(datas, datas[n2]);
-
-    if (root1 != root2) {
-        //union 方式直接让第一个节点指向第二个节点 按秩归并
-        //比较一下 谁贴到谁上面去 根据高度来判断
-        datas[root1].parent = n2;
-    }
-    
-}
-
-void check_connection(SetType datas[], int n1, int n2) {
-    //在搜索的过程中 能找到 n2
-    if (check_two_nodes(datas, n1, n2)) {
+void Check_connection(SetType S) {
+    ElementType u, v;
+    SetName Root1, Root2;
+    scanf("%d %d\n", &u, &v);
+    Root1 = Find(S, u-1);
+    Root2 = Find(S, v-1);
+    if (Root1 == Root2)
         printf("yes\n");
-    } else {
+    else
         printf("no\n");
-    }
 }
 
-void check_network(SetType datas[], int N) {
-    //判断这里面有几组
-    int count = 0;
-    for (int i = 1; i <= N; i++) {
-        if (datas[i].parent == -1)
-            count++;
+void Check_network( SetType S, int n) {
+    int i, counter = 0;
+    for (i = 0; i < n; i++) {
+        if (S[i] < 0)
+            counter++;
     }
-    if (count <= 1) {
-        printf("The network is connected\n");
-    } else {
-        printf("There are %d components.\n",count);
-    }
+    if (counter == 1)
+        printf("The network is connected.\n");
+    else
+        printf("There are %d components.\n",counter);
 }
 
-int main(int argc, const char * argv[]) {
-    int N;
+int main() {
+    SetType S;
+    int n;
     char in;
-    scanf("%d\n",&N);
-    SetType datas[N + 1];
-    
-    for (int i = 1; i <= N; i++) {
-        datas[i].parent = -1;
-        datas[i].data = i ;
-    }
-    
+    scanf("%d\n", &n);
+    for (int i = 0; i < n; i++)
+        S[i] = -1;
     do {
         scanf("%c",&in);
-        int n1, n2;
-        scanf("%d %d",&n1, &n2);
         switch (in) {
-            case 'C':
-                check_connection(datas, n1, n2);
-                break;
             case 'I':
-                input_conntection(datas, n1, n2);
+                Input_connection( S );
+                break;
+            case 'C':
+                Check_connection( S );
                 break;
             case 'S':
-                check_network(datas, N);
+                Check_network( S, n );
+                break;
                 break;
         }
     } while (in != 'S');
-    
- 
     return 0;
 }
