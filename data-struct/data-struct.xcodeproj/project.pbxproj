@@ -18,6 +18,7 @@
 		4D75F2BB26C1277100AC6216 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D75F2BA26C1277100AC6216 /* main.cpp */; };
 		4D90E21326C6461C0017D274 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D90E21226C6461C0017D274 /* main.cpp */; };
 		4D90E21E26C648310017D274 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D90E21D26C648310017D274 /* main.cpp */; };
+		4D90E22926C6498F0017D274 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4D90E22826C6498F0017D274 /* main.cpp */; };
 		4DDD4D0226A660DD0065D11C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD4D0126A660DD0065D11C /* main.cpp */; };
 		4DDD4D0F26A661480065D11C /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 4DDD4D0E26A661480065D11C /* main.cpp */; };
 /* End PBXBuildFile section */
@@ -149,6 +150,15 @@
 			);
 			runOnlyForDeploymentPostprocessing = 1;
 		};
+		4D90E22426C6498F0017D274 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
 		4DDD4CFC26A660DD0065D11C /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -195,6 +205,8 @@
 		4D90E21226C6461C0017D274 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4D90E21B26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "10-排序4 统计工龄 (20 point(s))"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4D90E21D26C648310017D274 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
+		4D90E22626C6498F0017D274 /* 10-排序5 PAT Judge */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "10-排序5 PAT Judge"; sourceTree = BUILT_PRODUCTS_DIR; };
+		4D90E22826C6498F0017D274 /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DDD4CFE26A660DD0065D11C /* data-struct */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "data-struct"; sourceTree = BUILT_PRODUCTS_DIR; };
 		4DDD4D0126A660DD0065D11C /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = "<group>"; };
 		4DDD4D0C26A661480065D11C /* 04-树7 二叉搜索树的操作集 */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "04-树7 二叉搜索树的操作集"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -300,6 +312,13 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		4D90E22326C6498F0017D274 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		4DDD4CFB26A660DD0065D11C /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -389,20 +408,28 @@
 			path = "05-树9 Huffman Codes";
 			sourceTree = "<group>";
 		};
-		4D90E21126C6461C0017D274 /* 09-排序1 排序 (25 point(s)) */ = {
+		4D90E21126C6461C0017D274 /* 09-排序1 排序 */ = {
 			isa = PBXGroup;
 			children = (
 				4D90E21226C6461C0017D274 /* main.cpp */,
 			);
-			path = "09-排序1 排序 (25 point(s))";
+			path = "09-排序1 排序";
 			sourceTree = "<group>";
 		};
-		4D90E21C26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */ = {
+		4D90E21C26C648310017D274 /* 10-排序4 统计工龄 */ = {
 			isa = PBXGroup;
 			children = (
 				4D90E21D26C648310017D274 /* main.cpp */,
 			);
-			path = "10-排序4 统计工龄 (20 point(s))";
+			path = "10-排序4 统计工龄";
+			sourceTree = "<group>";
+		};
+		4D90E22726C6498F0017D274 /* 10-排序5 PAT Judge */ = {
+			isa = PBXGroup;
+			children = (
+				4D90E22826C6498F0017D274 /* main.cpp */,
+			);
+			path = "10-排序5 PAT Judge";
 			sourceTree = "<group>";
 		};
 		4DDD4CF526A660DD0065D11C = {
@@ -419,8 +446,9 @@
 				4D75F2A326BD2ECE00AC6216 /* 05-树7 堆中的路径 */,
 				4D75F2AE26BD386600AC6216 /* 05-树8 File Transfer */,
 				4D75F2B926C1277100AC6216 /* 05-树9 Huffman Codes */,
-				4D90E21126C6461C0017D274 /* 09-排序1 排序 (25 point(s)) */,
-				4D90E21C26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */,
+				4D90E21126C6461C0017D274 /* 09-排序1 排序 */,
+				4D90E21C26C648310017D274 /* 10-排序4 统计工龄 */,
+				4D90E22726C6498F0017D274 /* 10-排序5 PAT Judge */,
 				4DDD4CFF26A660DD0065D11C /* Products */,
 			);
 			sourceTree = "<group>";
@@ -444,6 +472,7 @@
 				4D75F2B826C1277100AC6216 /* 05-树9 Huffman Codes */,
 				4D90E21026C6461C0017D274 /* 09-排序1 排序 (25 point(s)) */,
 				4D90E21B26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */,
+				4D90E22626C6498F0017D274 /* 10-排序5 PAT Judge */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -705,6 +734,23 @@
 			productReference = 4D90E21B26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */;
 			productType = "com.apple.product-type.tool";
 		};
+		4D90E22526C6498F0017D274 /* 10-排序5 PAT Judge */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4D90E22A26C6498F0017D274 /* Build configuration list for PBXNativeTarget "10-排序5 PAT Judge" */;
+			buildPhases = (
+				4D90E22226C6498F0017D274 /* Sources */,
+				4D90E22326C6498F0017D274 /* Frameworks */,
+				4D90E22426C6498F0017D274 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "10-排序5 PAT Judge";
+			productName = "10-排序5 PAT Judge";
+			productReference = 4D90E22626C6498F0017D274 /* 10-排序5 PAT Judge */;
+			productType = "com.apple.product-type.tool";
+		};
 		4DDD4CFD26A660DD0065D11C /* data-struct */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 4DDD4D0526A660DD0065D11C /* Build configuration list for PBXNativeTarget "data-struct" */;
@@ -789,6 +835,9 @@
 					4D90E21A26C648310017D274 = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
+					4D90E22526C6498F0017D274 = {
+						CreatedOnToolsVersion = 12.5.1;
+					};
 					4DDD4CFD26A660DD0065D11C = {
 						CreatedOnToolsVersion = 12.5.1;
 					};
@@ -826,6 +875,7 @@
 				4D75F2B726C1277100AC6216 /* 05-树9 Huffman Codes */,
 				4D90E20F26C6461C0017D274 /* 09-排序1 排序 (25 point(s)) */,
 				4D90E21A26C648310017D274 /* 10-排序4 统计工龄 (20 point(s)) */,
+				4D90E22526C6498F0017D274 /* 10-排序5 PAT Judge */,
 			);
 		};
 /* End PBXProject section */
@@ -937,6 +987,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				4D90E21E26C648310017D274 /* main.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4D90E22226C6498F0017D274 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4D90E22926C6498F0017D274 /* main.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -1176,6 +1234,22 @@
 			name = Debug;
 		};
 		4D90E22126C648320017D274 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4D90E22B26C6498F0017D274 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4D90E22C26C6498F0017D274 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
@@ -1451,6 +1525,15 @@
 			buildConfigurations = (
 				4D90E22026C648320017D274 /* Debug */,
 				4D90E22126C648320017D274 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4D90E22A26C6498F0017D274 /* Build configuration list for PBXNativeTarget "10-排序5 PAT Judge" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4D90E22B26C6498F0017D274 /* Debug */,
+				4D90E22C26C6498F0017D274 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
