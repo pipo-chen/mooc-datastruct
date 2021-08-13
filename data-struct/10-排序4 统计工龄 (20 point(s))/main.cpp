@@ -6,9 +6,25 @@
 //
 
 #include <iostream>
-
+#include <algorithm>
+#define MAXAGE 51
+using namespace::std;
 int main(int argc, const char * argv[]) {
-    // insert code here...
-    std::cout << "Hello, World!\n";
+    int n;
+    scanf("%d",&n);
+    int count[MAXAGE];//0-50
+    for (int i = 0; i < MAXAGE; i++)
+        count[i] = -1;
+    for (int j = 0; j < n; j++) {
+        int age;
+        scanf("%d",&age);
+        count[age]++;
+    }
+    for (int k = 0; k < MAXAGE; k++) {
+        if (count[k] != -1) {
+            printf("%d:%d\n",k, count[k] + 1);
+        }
+    }
+    
     return 0;
 }
